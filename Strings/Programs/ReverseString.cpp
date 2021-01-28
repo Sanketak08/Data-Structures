@@ -18,7 +18,7 @@ int main()
     string s1 = "";
 
     cout << "\nEnter the string: ";
-    cin >> s1;
+    getline(cin, s1);
 
     reverse(s1);
 
