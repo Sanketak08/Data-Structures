@@ -28,14 +28,16 @@ public class Problem_II_20 {
         // Going from right to left and finding out max profit => if stock bought today on which day it 
         // should be sold
 
-        int maxProfitTillTodayBought = 0;
-        int maxValueAfterToday = arr[arr.length - 1]; // Stock value after today
+        int maxProfitTillTodayBought = 0; // To save max profit
+        int maxValueAfterToday = arr[arr.length - 1]; // Max Stock value after today
         int[] storeMaxProfitBought = new int[arr.length];
 
+        // Looping in reverse order from 2nd last element
         for (int i = arr.length - 2; i >= 0; i--) {
             maxValueAfterToday = Math.max(maxValueAfterToday, arr[i]);
             maxProfitTillTodayBought = maxValueAfterToday - arr[i];
 
+            // Storing max value to the current index of store
             if (maxProfitTillTodayBought > storeMaxProfitBought[i + 1]) {
                 storeMaxProfitBought[i] = maxProfitTillTodayBought;
             } else {
@@ -45,7 +47,7 @@ public class Problem_II_20 {
 
         int overallProfit = 0;
         for (int i = 0; i < arr.length; i++) {
-            overallProfit = Math.max(overallProfit, (storeMaxProfitBought[i] + storeMaxProfitSold[i]));
+            overallProfit = Math.max(overallProfit, (storeMaxProfitBought[i] - storeMaxProfitSold[i]));
         }
         return overallProfit;
     }
