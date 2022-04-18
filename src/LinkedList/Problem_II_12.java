@@ -46,7 +46,7 @@ public class Problem_II_12 {
             sum += carry;
             carry = sum / 10;
             temp.next = new Node(sum % 10);
-            tem = temp.next;
+            temp = temp.next;
         }
 
         temp = reverseLinkedlist(dummy.next);
