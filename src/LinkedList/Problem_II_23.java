@@ -6,8 +6,8 @@ public class Problem_II_23 {
     }
 
     public static DNode reverseDoublyList(DNode head) {
-        Node temp = null;
-        Node curr = head;
+        DNode temp = null;
+        DNode curr = head;
 
         while (curr != null) {
             temp = curr.prev;

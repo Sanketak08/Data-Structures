@@ -40,8 +40,8 @@ public class Problem_II_26 {
                 head = head.next;
             }
 
-            return newHead;
         }
+        return newHead;
 
     }
 }

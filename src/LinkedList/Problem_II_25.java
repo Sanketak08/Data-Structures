@@ -6,7 +6,7 @@ public class Problem_II_25 {
     }
     
     public static int countTriplets(DNode head, int sum) {
-        Node first, last, curr;
+        DNode first, last, curr;
         int count = 0;
         last = head;
 
@@ -18,7 +18,7 @@ public class Problem_II_25 {
             first = curr.next;
             count += countPairs(first, last, sum - first.data);
         }
-        return data;
+        return count;
     }
 
     public static int countPairs(DNode first, DNode second, int value) {

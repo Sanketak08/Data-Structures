@@ -11,12 +11,12 @@ public class Problem_II_16 {
         }
 
         Node pivot_prev = paritionLast(start, end);
-        sort(start, pivot_prev);
+        quickSort(start, pivot_prev);
 
         if (pivot_prev != null && pivot_prev == start) {
-            sort(pivot_prev.next, end);
+            quickSort(pivot_prev.next, end);
         } else if (pivot_prev != null && pivot_prev.next != null) {
-            sort(pivot_prev.next.next, end);
+            quickSort(pivot_prev.next.next, end);
         }
     }
     

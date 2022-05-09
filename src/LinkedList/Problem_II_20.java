@@ -36,11 +36,11 @@ public class Problem_II_20 {
             }
             head = temp.next;
             prev.next = head;
-        }else if (curr.next == head) { // If that node is last node
+        }else if (temp.next == head) { // If that node is last node
             prev.next = head;
         }
         else { // If that node is in between
-            prev.next = curr.next;
+            prev.next = temp.next;
         }
 
         return head;

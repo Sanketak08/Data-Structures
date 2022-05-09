@@ -6,8 +6,8 @@ public class Problem_II_24 {
     }
     
     public static void pairsWithSum(DNode head, int sum) {
-        Node first = head;
-        Node last = head;
+        DNode first = head;
+        DNode last = head;
         boolean found = false;
 
         while (last.next != null) {

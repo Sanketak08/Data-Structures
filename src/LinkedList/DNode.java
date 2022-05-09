@@ -2,10 +2,10 @@ package LinkedList;
 
 public class DNode {
     int data;
-    Node next;
-    Node prev;
+    DNode next;
+    DNode prev;
     
-    Node(int d) {
+    DNode(int d) {
         data = d;
         next = null;
         prev=null;
