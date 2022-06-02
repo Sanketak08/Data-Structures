@@ -57,21 +57,20 @@ public class Que12 {
             if (node.right != null) {
                 queue.offer(new Tuple(node.right, x + 1, y + 1));
             }
+        }
+        // Looping in our custom data structure and appending values in 2D list
+        List<List<Integer>> list = new ArrayList<>();
 
-            // Looping in our custom data structure and appending values in 2D list
-            List<List<Integer>> list = new ArrayList<>();
-
-            for (TreeMap<Integer, PriorityQueue<Integer>> ys : map.values()) {
-                list.add(new ArrayList<>());
-                for (PriorityQueue<Integer> nodes : ys.values()) {
-                    while (!nodes.isEmpty()) {
-                        list.get(list.size() - 1).add(nodes.poll());
-                    }
+        for (TreeMap<Integer, PriorityQueue<Integer>> ys : map.values()) {
+            list.add(new ArrayList<>());
+            for (PriorityQueue<Integer> nodes : ys.values()) {
+                while (!nodes.isEmpty()) {
+                    list.get(list.size() - 1).add(nodes.poll());
                 }
             }
-
-            return list;
         }
+        
+        return list;
     }
 
 }
