@@ -26,6 +26,7 @@ public class Que17 {
             return false;
         }
 
+        list.add(root.data);
         if (root.data == x) {
             return true;
         }
