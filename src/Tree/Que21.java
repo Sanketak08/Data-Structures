@@ -13,7 +13,7 @@ public class Que21 {
 
     }
 
-    // Method to keep ttthe track of parents
+    // Method to keep the track of parents
     // e.g. => child(key) -> parent(value)
     public static void markParents(TreeNode root, Map<TreeNode, TreeNode> parent_track, TreeNode target) {
         Queue<TreeNode> queue = new LinkedList<>();
