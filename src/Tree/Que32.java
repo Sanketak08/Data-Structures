@@ -2,6 +2,8 @@ package Tree;
 
 // Insert a given node in BST
 
+//? Inorder traversal of BST is always sorted
+
 // Time Complexity => O(logN)
 
 public class Que32 {
