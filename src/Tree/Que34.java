@@ -2,7 +2,7 @@ package Tree;
 
 // Validate a BST => Check if BT is BST
 
-// Explaination => We'll provide a range & check if that node lies in that range, if YES then return true else false.
+// Explanation => We'll provide a range & check if that node lies in that range, if YES then return true else false.
 
 public class Que34 {
     public static void main(String[] args) {
